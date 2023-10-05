@@ -3,14 +3,20 @@
 # Update package list
 sudo apt update
 
+# Install git
+sudo apt install git
+
+# Install build-essential
+sudo apt install build-essential
+
 # Install cmake
-sudo apt install cmake -y
+sudo apt install cmake
 
 # Install openocd
-sudo apt install openocd -y
+sudo apt install openocd
 
 # Install gdb multiarch
-sudo apt install gdb-multiarch -y
+sudo apt install gdb-multiarch
 
 # Download arm toolchain zip file
 wget https://developer.arm.com/-/media/Files/downloads/gnu/12.3.rel1/binrel/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi.tar.xz -O /tmp/arm-toolchain.tar.xz
