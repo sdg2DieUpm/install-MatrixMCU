@@ -7,7 +7,7 @@ brew update
 brew install cmake
 
 # Install openocd
-brew install opencd
+brew install openocd
 
 # Install arm toolchain
 brew install --cask gcc-arm-embedded
