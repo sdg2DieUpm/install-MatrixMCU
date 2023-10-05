@@ -16,7 +16,7 @@ wget https://developer.arm.com/-/media/Files/downloads/gnu/12.3.rel1/binrel/arm-
 sudo tar -xf /tmp/arm-toolchain.tar.xz -C /usr/share/
 
 # Create symbolic links to arm toolchain in /usr/bin
-sudo ln -s /usr/share/arm-gnu-toolchain-12.3.rel1/bin/arm-none-eabi-gcc /usr/bin/arm-none-eabi-gcc
-sudo ln -s /usr/share/arm-gnu-toolchain-12.3.rel1/bin/arm-none-eabi-g++ /usr/bin/arm-none-eabi-g++
-sudo ln -s /usr/share/arm-gnu-toolchain-12.3.rel1/bin/arm-none-eabi-objcopy /usr/bin/arm-none-eabi-objcopy
-sudo ln -s /usr/share/arm-gnu-toolchain-12.3.rel1/bin/arm-none-eabi-objdump /usr/bin/arm-none-eabi-objdump
+sudo ln -s /usr/share/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc /usr/bin/arm-none-eabi-gcc
+sudo ln -s /usr/share/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++ /usr/bin/arm-none-eabi-g++
+sudo ln -s /usr/share/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-objcopy /usr/bin/arm-none-eabi-objcopy
+sudo ln -s /usr/share/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-objdump /usr/bin/arm-none-eabi-objdump
