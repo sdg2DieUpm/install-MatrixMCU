@@ -19,7 +19,7 @@ Once you have Homebrew on your Mac, clone this repo and move to this directory:
 ```
 git clone https://github.com/sdg2DieUpm/installer.git && cd installer
 ```
-Then, run the script `macos.sh` in sudo mode:
+Then, run the script `macos.sh` in `sudo` mode:
 ```
 sudo ./macos.sh
 ```
@@ -50,7 +50,7 @@ Now, we have WSL with the latest version of Ubuntu installed in our machine.
 If you search "Ubuntu" in your applications, you will find an executable that runs an Ubuntu shell on top of WSL.
 You will find more information about how to configure your WSL development environment [here](https://learn.microsoft.com/es-es/windows/wsl/setup/environment?source=recommendations).
 
-Next, you only must follows the installation instructions for Ubuntu users.
+Next, you must follow the installation instructions for Ubuntu users.
 
 **NOTE**: You must follow these instructions **from the Ubuntu terminal**, not the Window's PowerShell.
 
