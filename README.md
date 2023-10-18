@@ -87,10 +87,10 @@ The ST-Link Debug is the USB controller of our STM32 board. Note down the `VID:P
 We will need it to identify which USB device we want to attach to WSL.
 4. Run the following command **in the Windows PowerShell** to connect the USB device to your Ubuntu system:
 ```
-usbipd wsl attach -a -i <VID:PID>
+usbipd wsl attach -a -i 0483:374b
 ```
 Make sure that you insert the correct hardware number for your board!
-
+If the number does not coincide with this example, you will need to modify the command.
 If everything went well, your PowerShell terminal will prompt something like this:
 ```
 usbpid: info: Device with hardware-id <VID-PID> found at busid <BUSID>.
