@@ -28,7 +28,6 @@ sudo ln -s /usr/local/arm-gnu-toolchain-13.2.rel1-x86_64-arm-none-eabi/bin/arm-n
 sudo ln -s /usr/local/arm-gnu-toolchain-13.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++ /opt/sdg2/bin/arm-none-eabi-g++
 sudo ln -s /usr/local/arm-gnu-toolchain-13.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-objcopy /opt/sdg2/bin/arm-none-eabi-objcopy
 sudo ln -s /usr/local/arm-gnu-toolchain-13.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-objdump /opt/sdg2/bin/arm-none-eabi-objdump
-sudo ln -s /usr/local/arm-gnu-toolchain-13.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-objdump /opt/sdg2/bin/arm-none-eabi-objdump
 
 # Get the path to gdb-multiarch...
 GDB_MULTIARCH_PATH=$(which gdb-multiarch)
