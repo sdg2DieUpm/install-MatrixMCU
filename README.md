@@ -34,7 +34,37 @@ arm-none-eabi-objdump --version
 ```
 Each of these commands should output the current version of the tool under study, as well as other additional details about the software.
 
-## Windows
+## Ubuntu
+
+First, we must install [`git`](https://git-scm.com) in our system.
+If you have not done it yet, open a terminal and insert the following commands:
+```bash
+sudo apt update
+sudo apt install git
+```
+
+Next, clone this repo and move to the cloned directory:
+```
+git clone https://github.com/sdg2DieUpm/installer.git && cd installer
+```
+Then, run the script `ubuntu.sh` in a terminal **in `sudo` mode**:
+```bash
+sudo ./ubuntu.sh
+```
+Once you are done, close and re-open the terminal so the shell reloads the `.bashrc` settings
+
+To check that the installation succeeded, run the following commands **ONE BY ONE**:
+```bash
+arm-none-eabi-gcc --version
+arm-none-eabi-g++ --version
+arm-none-eabi-gdb --version
+arm-none-eabi-objcopy --version
+arm-none-eabi-objdump --version
+```
+Each of these commands should output the current version of the tool under study, as well as other additional details about the software.
+
+<!-- 
+## Windows with WSL
 
 For Windows, we will use the Windows Subsystem for Linux (WSL).
 WSL allows developers to install a Linux distribution (such as Ubuntu, OpenSUSE, Kali, Debian, Arch Linux, etc.) and use Bash applications, utilities and command line tools directly on Windows, unmodified, without the overhead of a traditional virtual machine or dual-boot configuration.
@@ -108,26 +138,4 @@ You should be able to see your ST-Link Debug probe connected to your Ubuntu term
 ### Installing the Dependencies on the Ubuntu Subsytem
 
 Next, follow the installation instructions for Ubuntu **from the Ubuntu terminal**, not the Windows PowerShell.
-
-
-## Ubuntu
-
-Clone this repo and move to this directory:
-```
-git clone https://github.com/sdg2DieUpm/installer.git && cd installer
-```
-Then, run the script `ubuntu.sh` in a terminal in `sudo` mode:
-```bash
-sudo ./ubuntu.sh
-```
-Once you are done, close and re-open the terminal so the shell reloads the `.bashrc` settings
-
-To check that the installation succeeded, run the following commands **ONE BY ONE**:
-```bash
-arm-none-eabi-gcc --version
-arm-none-eabi-g++ --version
-arm-none-eabi-gdb --version
-arm-none-eabi-objcopy --version
-arm-none-eabi-objdump --version
-```
-Each of these commands should output the current version of the tool under study, as well as other additional details about the software.
+-->
