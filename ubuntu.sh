@@ -24,10 +24,10 @@ sudo tar -xf /tmp/arm-toolchain.tar.xz -C /usr/local/
 sudo mkdir /opt/sdg2
 sudo mkdir /opt/sdg2/bin
 # Create symbolic links to arm toolchain in /opt/sdg2/bin
-sudo ln -s /usr/local/arm-gnu-toolchain-13.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc /opt/sdg2/bin/arm-none-eabi-gcc
-sudo ln -s /usr/local/arm-gnu-toolchain-13.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++ /opt/sdg2/bin/arm-none-eabi-g++
-sudo ln -s /usr/local/arm-gnu-toolchain-13.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-objcopy /opt/sdg2/bin/arm-none-eabi-objcopy
-sudo ln -s /usr/local/arm-gnu-toolchain-13.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-objdump /opt/sdg2/bin/arm-none-eabi-objdump
+sudo ln -s /usr/local/arm-gnu-toolchain-13.2.Rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc /opt/sdg2/bin/arm-none-eabi-gcc
+sudo ln -s /usr/local/arm-gnu-toolchain-13.2.Rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++ /opt/sdg2/bin/arm-none-eabi-g++
+sudo ln -s /usr/local/arm-gnu-toolchain-13.2.Rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-objcopy /opt/sdg2/bin/arm-none-eabi-objcopy
+sudo ln -s /usr/local/arm-gnu-toolchain-13.2.Rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-objdump /opt/sdg2/bin/arm-none-eabi-objdump
 
 # Get the path to gdb-multiarch...
 GDB_MULTIARCH_PATH=$(which gdb-multiarch)
