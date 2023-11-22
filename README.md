@@ -51,8 +51,10 @@ Then, run the script `ubuntu.sh` in a terminal **in `sudo` mode**:
 ```bash
 sudo ./ubuntu.sh
 ```
-Once you are done, close and re-open the terminal so the shell reloads the `.bashrc` settings
-
+Once you are done, reload the `.bashrc` settings on your terminal:
+```bash
+source ~/.bashrc
+```
 To check that the installation succeeded, run the following commands **ONE BY ONE**:
 ```bash
 arm-none-eabi-gcc --version
