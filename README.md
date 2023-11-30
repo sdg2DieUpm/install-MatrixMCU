@@ -1,4 +1,4 @@
-# Installation instructions for the SDG2 laboratory
+# Installation instructions for using the [`MatrixMCU`](https://github.com/sdg2DieUpm/MatrixMCU) toolkit
 
 ## MacOS
 
@@ -17,7 +17,7 @@ This command should output the version of Homebrew installed on your Mac.
 
 Once you have Homebrew on your Mac, clone this repo and move to this directory:
 ```
-git clone https://github.com/sdg2DieUpm/installer.git && cd installer
+git clone https://github.com/sdg2DieUpm/install-MatrixMCU.git && cd installer
 ```
 Then, run the script `macos.sh` in `sudo` mode:
 ```
@@ -45,7 +45,7 @@ sudo apt install git
 
 Next, clone this repo and move to the cloned directory:
 ```
-git clone https://github.com/sdg2DieUpm/installer.git && cd installer
+git clone https://github.com/sdg2DieUpm/install-MatrixMCU.git && cd installer
 ```
 Then, run the script `ubuntu.sh` in a terminal **in `sudo` mode**:
 ```bash
