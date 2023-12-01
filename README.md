@@ -1,5 +1,7 @@
 # Installation instructions for using the [`MatrixMCU`](https://github.com/sdg2DieUpm/MatrixMCU) toolkit
 
+The **MatrixMCU** toolkit has been tested for the 3 most important operative systems and it is intended to be used with the VSCode editor. Here you can find the installation steps for MacOS and Linux. If you need the instructions for Windows, please contact us.
+
 ## MacOS
 
 First, we must install [Homebrew](https://brew.sh) in our Mac.
