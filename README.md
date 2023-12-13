@@ -21,9 +21,9 @@ Once you have Homebrew on your Mac, clone this repo and move to this directory:
 ```
 git clone https://github.com/sdg2DieUpm/install-MatrixMCU.git && cd install-MatrixMCU
 ```
-Then, run the script `macos.sh` in `sudo` mode:
+Then, run the script `macos.sh`:
 ```
-sudo ./macos.sh
+./macos.sh
 ```
 
 To check that the installation succeeded, run the following commands **ONE BY ONE**:
