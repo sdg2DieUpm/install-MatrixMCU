@@ -51,7 +51,7 @@ git clone https://github.com/sdg2DieUpm/install-MatrixMCU.git && cd install-Matr
 ```
 Then, run the script `ubuntu.sh` in a terminal **in `sudo` mode**:
 ```bash
-sudo ./ubuntu.sh
+./ubuntu.sh
 ```
 Once you are done, reload the `.bashrc` settings on your terminal:
 ```bash
@@ -60,9 +60,17 @@ source ~/.bashrc
 To check that the installation succeeded, run the following commands **ONE BY ONE**:
 ```bash
 arm-none-eabi-gcc --version
+```
+```bash
 arm-none-eabi-g++ --version
+```
+```bash
 arm-none-eabi-gdb --version
+```
+```bash
 arm-none-eabi-objcopy --version
+```
+```bash
 arm-none-eabi-objdump --version
 ```
 Each of these commands should output the current version of the tool under study, as well as other additional details about the software.
