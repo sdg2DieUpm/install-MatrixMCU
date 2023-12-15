@@ -7,7 +7,8 @@ sudo apt update
 sudo apt install build-essential
 
 # Install cmake
-sudo apt install cmake
+# sudo apt install cmake
+sudo snap install cmake --classic
 
 # Install openocd
 sudo apt install openocd
