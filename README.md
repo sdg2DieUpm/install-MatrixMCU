@@ -57,9 +57,13 @@ Next, clone this repo and move to the cloned directory:
 ```
 git clone https://github.com/sdg2DieUpm/install-MatrixMCU.git && cd install-MatrixMCU
 ```
-Then, run the script `ubuntu.sh` in a terminal:
+Then, if your OS is Ubuntu 22, run the script `ubuntu22.sh` in a terminal:
 ```bash
-./ubuntu.sh
+source ubuntu22.sh
+```
+Alternatively, if your OS is Ubuntu 24, run the script `ubuntu24.sh` in a terminal:
+```bash
+source ubuntu24.sh
 ```
 Once you are done, reload the `.bashrc` settings on your terminal:
 ```bash
