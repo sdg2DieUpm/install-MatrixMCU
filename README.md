@@ -50,6 +50,7 @@ First, we must install [`git`](https://git-scm.com) in our system.
 If you have not done it yet, open a terminal and insert the following commands:
 ```bash
 sudo apt update
+sudo apt upgrade
 sudo apt install git
 ```
 
