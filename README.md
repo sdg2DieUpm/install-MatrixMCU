@@ -232,7 +232,9 @@ arm-none-eabi-objdump --version
 Each of these commands should output the current version of the tool under study, as well as other additional details about the software.
 
 ### Issues when trying to connect with OpenOCD?
+
 ```bash
-sudo cp usb-stlink-v2.rules /etc/udev/rules.d
-sudo service udev restart
+sudo cp -a udev/rules.d/* /etc/udev/rules.d/
+$ sudo udevadm control --reload-rules
+$ sudo udevadm trigger
 ```
