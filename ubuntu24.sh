@@ -38,7 +38,3 @@ sudo ln -s $GDB_MULTIARCH_PATH /opt/MatrixMCU/bin/arm-none-eabi-gdb
 
 # Add /opt/MatrixMCU/bin to PATH
 echo 'export PATH=/opt/MatrixMCU/bin:$PATH # Required for MatrixMCU toolkit' >> ~/.bashrc
-
-# Add udev rules to connect to STLINK-v2
-echo 'ATTRS{idProduct}=="374b", ATTRS{idVendor}=="0483", MODE="666", GROUP="plugdev"' >> /etc/udev/rules.d/usb-stlink-v2.rules
-sudo service udev restart
