@@ -234,7 +234,8 @@ Each of these commands should output the current version of the tool under study
 ### Issues when trying to connect with OpenOCD?
 
 ```bash
-sudo cp -a udev/rules.d/* /etc/udev/rules.d/
-$ sudo udevadm control --reload-rules
-$ sudo udevadm trigger
+$ sudo cp -a udev/rules.d/* /etc/udev/rules.d/
+$ sudo udevadm control --reload
+# If previous command triggers an error, try with:
+$ sudo service udev restart
 ```
