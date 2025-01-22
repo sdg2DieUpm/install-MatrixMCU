@@ -52,7 +52,7 @@ WSL allows developers to install a Linux distribution (such as Ubuntu, OpenSUSE,
 
 First, open Windows PowerShell as an administrator by right-clicking and selecting "Run as administrator". Next, insert the following command to install WSL:
 ```
-wsl --install
+wsl --install -d Ubuntu-24.04
 ```
 Once done (it might take a while), you must restart your PC to apply all the changes.
 
