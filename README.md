@@ -231,6 +231,54 @@ arm-none-eabi-objdump --version
 ```
 Each of these commands should output the current version of the tool under study, as well as other additional details about the software.
 
+## Fedora
+
+> [!CAUTION]
+> This script has not been thoroughly tested througout the subject yet. Use responsibly.
+
+First, we must install [`git`](https://git-scm.com) in our system.
+If you have not done it yet, open a terminal and insert the following commands:
+```bash
+sudo dnf update
+sudo dnf upgrade
+sudo dnf install git
+```
+
+Don't forget to insert `Y` in the terminal every time Fedora asks you if you want to continue.
+
+Next, clone this repo and move to the cloned directory:
+```
+git clone https://github.com/sdg2DieUpm/install-MatrixMCU.git && cd install-MatrixMCU
+```
+Alternatively, if your OS is Fedora 43, run the script `fedora43.sh` in a terminal:
+```bash
+source fedora43.sh
+```
+
+Once you are done, reload the `.bashrc` settings on your terminal:
+```bash
+source ~/.bashrc
+```
+
+To check that the installation succeeded, run the following commands **ONE BY ONE**:
+```bash
+arm-none-eabi-gcc --version
+```
+```bash
+arm-none-eabi-g++ --version
+```
+```bash
+arm-none-eabi-gdb --version
+```
+```bash
+arm-none-eabi-objcopy --version
+```
+```bash
+arm-none-eabi-objdump --version
+```
+Each of these commands should output the current version of the tool under study, as well as other additional details about the software.
+
+
 ### Issues when trying to connect with OpenOCD?
 
 ```bash
