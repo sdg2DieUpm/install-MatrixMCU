@@ -250,10 +250,11 @@ Next, clone this repo and move to the cloned directory:
 ```
 git clone https://github.com/sdg2DieUpm/install-MatrixMCU.git && cd install-MatrixMCU
 ```
-Alternatively, if your OS is Fedora 43, run the script `fedora43.sh` in a terminal:
+Run the script `fedora43.sh` in a terminal:
 ```bash
 source fedora43.sh
 ```
+This script has been used in Fedora 43. If you have another version, you may need to adapt it.
 
 Once you are done, reload the `.bashrc` settings on your terminal:
 ```bash
