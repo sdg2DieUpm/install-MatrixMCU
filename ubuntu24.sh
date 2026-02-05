@@ -21,7 +21,7 @@ sudo mkdir -p /opt/MatrixMCU/bin
 
 # Download arm toolchain zip file
 wget https://developer.arm.com/-/media/Files/downloads/gnu/15.2.rel1/binrel/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi.tar.xz -O /tmp/arm-toolchain.tar.xz
-# Uncompress arm toolchain zip file in /usr/share directory
+# Uncompress arm toolchain zip file in /opt directory
 sudo tar -xf /tmp/arm-toolchain.tar.xz -C /opt/MatrixMCU
 
 # Create symbolic links to arm toolchain in /opt/MatrixMCU/bin
