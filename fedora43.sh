@@ -33,5 +33,5 @@ sudo ln -s /opt/MatrixMCU/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/a
 # Add /opt/MatrixMCU/bin to PATH
 echo 'export PATH=/opt/MatrixMCU/bin:$PATH # Required for MatrixMCU toolkit' >> ~/.bashrc
 
-# Alternatively it can also be added inside a separate file in /.bashrc.d/ directory, which is a more modular approach.
+# Alternatively it can also be added inside a separate file in ~/.bashrc.d/ directory, which is a more modular approach.
 #
