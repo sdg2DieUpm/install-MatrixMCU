@@ -1,0 +1,33 @@
+{
+  "name": "matrixmcu-native",
+  "displayName": "MatrixMCU: C nativo",
+  "description": "Extensiones de VS Code para programación en C nativo con MatrixMCU.",
+  "version": "0.1.0",
+  "publisher": "sdg2dieupm",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "keywords": [
+    "matrixmcu",
+    "c",
+    "native",
+    "education"
+  ],
+  "extensionPack": [
+    "ms-vscode.cpptools",
+    "ms-vscode.cpptools-themes",
+    "ms-vscode.cmake-tools",
+    "twxs.cmake",
+    "danielpinto8zz6.c-cpp-project-generator",
+    "ms-vscode.hexeditor"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sdg2DieUpm/install-MatrixMCU.git"
+  },
+  "homepage": "https://sdg2dieupm.github.io/install-MatrixMCU-guide/"
+}
