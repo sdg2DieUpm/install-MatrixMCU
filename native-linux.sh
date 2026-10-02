@@ -60,6 +60,33 @@ check_tools() {
     printf '\nLas herramientas para C nativo estan disponibles.\n'
 }
 
+check_packages() {
+    local missing=()
+    local package_name
+
+    for package_name in "${PACKAGES[@]}"; do
+        if [[ $(dpkg-query -W -f='${db:Status-Status}' "$package_name" 2>/dev/null || true) == installed ]]; then
+            printf '[OK] paquete %s\n' "$package_name"
+        else
+            printf '[FALTA] paquete %s\n' "$package_name"
+            missing+=("$package_name")
+        fi
+    done
+
+    if ((${#missing[@]} > 0)); then
+        printf '\nFaltan paquetes del sistema. Ejecuta el instalador sin --check para instalarlos.\n' >&2
+        return 1
+    fi
+}
+
+check_installation() {
+    local result=0
+
+    check_packages || result=1
+    check_tools || result=1
+    return "$result"
+}
+
 if (($# > 1)); then
     usage >&2
     exit 2
@@ -80,8 +107,11 @@ esac
 check_ubuntu
 
 if [[ ${1:-} == --check ]]; then
-    check_tools
-    exit $?
+    if check_installation; then
+        exit 0
+    else
+        exit 1
+    fi
 fi
 
 [[ -t 0 ]] || fail 'Ejecuta este script desde una terminal interactiva.'
@@ -110,5 +140,5 @@ fi
 "${APT_GET[@]}" install --yes --no-install-recommends "${PACKAGES[@]}"
 
 printf '\nComprobando herramientas instaladas...\n'
-check_tools
+check_installation
 printf '\nSiguiente paso: instala manualmente el pack MatrixMCU: C/C++ nativo desde VS Code.\n'
