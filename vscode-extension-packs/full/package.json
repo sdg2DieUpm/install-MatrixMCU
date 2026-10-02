@@ -3,7 +3,7 @@
   "displayName": "MatrixMCU: completo",
   "description": "Extensiones de VS Code para C nativo y compilación cruzada STM32 con MatrixMCU.",
   "version": "0.1.0",
-  "publisher": "sdg2dieupm",
+  "publisher": "sdgdieupm",
   "license": "MIT",
   "engines": {
     "vscode": "^1.85.0"

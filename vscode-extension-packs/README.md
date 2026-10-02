@@ -21,9 +21,10 @@ profile pack while connected to the target WSL distribution. Confirm the
 Extensions view shows each extension in the intended Local or WSL location
 before publishing these packs.
 
-The manifests currently use `sdg2dieupm` as a candidate publisher ID. Confirm or
-register the organization's Marketplace publisher before release. Do not publish
-these drafts until the professor review and the WSL placement tests pass.
+The manifests use the requested publisher ID `sdgdieupm`. Confirm that the
+organization can register this exact ID and create the publisher before release.
+The publisher ID cannot be changed after publishing. Do not publish these drafts
+until the professor review and the WSL placement tests pass.
 
 ## Package locally
 
