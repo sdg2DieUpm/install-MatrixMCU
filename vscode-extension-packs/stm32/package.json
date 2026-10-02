@@ -1,0 +1,36 @@
+{
+  "name": "matrixmcu-stm32",
+  "displayName": "MatrixMCU: STM32 cruzado",
+  "description": "Extensiones de VS Code para compilación cruzada y depuración de STM32 con MatrixMCU.",
+  "version": "0.1.1",
+  "publisher": "sdgdieupm",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "keywords": [
+    "matrixmcu",
+    "stm32",
+    "embedded",
+    "cross-compilation",
+    "education"
+  ],
+  "extensionPack": [
+    "ms-vscode.cpptools",
+    "ms-vscode.cpptools-themes",
+    "ms-vscode.cmake-tools",
+    "twxs.cmake",
+    "marus25.cortex-debug",
+    "rioj7.command-variable",
+    "ms-vscode.vscode-serial-monitor",
+    "gruntfuggly.todo-tree"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sdg2DieUpm/install-MatrixMCU.git"
+  },
+  "homepage": "https://sdg2dieupm.github.io/install-MatrixMCU-guide/"
+}

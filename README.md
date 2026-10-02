@@ -37,6 +37,21 @@ https://github.com/sdg2DieUpm/MatrixMCU.git
 
 Next, depending on the Operating System of your computer, follow the next steps.
 
+## First semester: native C on Ubuntu
+
+For native C development on Ubuntu 22.04, 24.04, or 26.04, run the dedicated
+installer from this repository:
+
+```bash
+bash native-linux.sh
+```
+
+It installs GCC/G++, Make, CMake, GDB, and Git. To check an existing setup
+without changing it, run `bash native-linux.sh --check`. Then install the
+[MatrixMCU: C/C++ native Extension Pack](https://marketplace.visualstudio.com/items?itemName=sdgdieupm.matrixmcu-c-native)
+manually from VS Code. The [student guide](https://sdg2dieupm.github.io/install-MatrixMCU-guide/linux-nativo-ubuntu.html)
+contains the full steps and validation exercise.
+
 ## MacOS
 
 First, we must install [Homebrew](https://brew.sh) on our Mac.

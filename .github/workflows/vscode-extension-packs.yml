@@ -1,0 +1,51 @@
+name: Validate VS Code Extension Packs
+
+on:
+  pull_request:
+    paths:
+      - 'vscode-extension-packs/**'
+      - 'native-linux.sh'
+      - '.github/workflows/vscode-extension-packs.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'vscode-extension-packs/**'
+      - 'native-linux.sh'
+      - '.github/workflows/vscode-extension-packs.yml'
+
+jobs:
+  validate-native-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate native Ubuntu installer
+        run: |
+          bash -n native-linux.sh
+          bash native-linux.sh --help
+
+  package:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        pack:
+          - native
+          - stm32
+          - full
+          - windows-wsl
+          - macos
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Package Extension Pack
+        working-directory: vscode-extension-packs/${{ matrix.pack }}
+        run: npx --yes @vscode/vsce package --pre-release --out "$RUNNER_TEMP/matrixmcu-${{ matrix.pack }}.vsix"
+      - name: Upload test VSIX
+        uses: actions/upload-artifact@v4
+        with:
+          name: matrixmcu-${{ matrix.pack }}-vsix
+          path: ${{ runner.temp }}/matrixmcu-${{ matrix.pack }}.vsix
+          if-no-files-found: error
+          retention-days: 7
