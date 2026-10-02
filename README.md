@@ -1,7 +1,41 @@
 # Installation instructions for using the [`MatrixMCU`](https://github.com/sdg2DieUpm/MatrixMCU) toolkit
 
-The **MatrixMCU** toolkit has been tested for the 3 most important Operating Systems and it is intended to be used with the VSCode editor.
+The **MatrixMCU** toolkit has been tested for the 3 most important Operating Systems and it is intended to be used with the Visual Studio Code editor.
 Here you can find the installation steps for MacOS, Windows, and Linux.
+
+## Prerequisites
+
+You must install additional tools to make `MatrixMCU` work.
+
+1. Install [Visual Studio Code](https://code.visualstudio.com)
+2. Install [Git](https://git-scm.com/install/)
+3. Clone this repository **recursively** and move to the `MatrixMCU` directory:
+    - Open Visual Studio Code.
+    - Click on the search bar:
+![VSCode search bar](img/vscode_search_bar.png)
+    - Start typing the following text: `"> Git: clone recursive"`.As you type, Visual Studio Code will suggest you different tasks.
+> [!IMPORTANT]
+>
+> Don't forget to type the first `>` in the text!
+> Otherwise, Visual Studio Code will not recognize that you want to run a task.
+-
+    - Click on **Git: Clone (recursive)**
+![VSCode Git Clone (recursive)](img/vscode_git_clone_recursive.png)
+    - In the URL text box, insert the URL of this repository:
+```
+https://github.com/sdg2DieUpm/MatrixMCU.git
+```
+-
+    - Click on *"Clone from URL"*
+![Clone this repo with VSCode](img/vscode_git_clone_repo.png)
+    - Select the directory of your computer where you want to clone MatrixMCU.
+    - When asked if you would like to open the newly cloned repository, click on *Open*.
+
+> [!NOTE]
+>
+> From now on, we will refer to MatrixMCU's directory as `<PATH_TO_MATRIX_MCU>`.
+
+Next, depending on the Operating System of your computer, follow the next steps.
 
 ## MacOS
 
@@ -18,13 +52,13 @@ brew --version
 ```
 This command should output the version of Homebrew installed on your Mac.
 
-Once you have Homebrew on your Mac, clone this repo and move to this directory:
+Once you have Homebrew on your Mac, move to MatrixMCU's directory in the terminal:
 ```
-git clone https://github.com/sdg2DieUpm/install-MatrixMCU.git && cd install-MatrixMCU
+cd <PATH_TO_MATRIXMCU>
 ```
 Then, run the script `macos.sh`:
 ```
-./macos.sh
+source install/macos.sh
 ```
 
 To check that the installation succeeded, run the following commands **ONE BY ONE**:
@@ -52,7 +86,7 @@ WSL allows developers to install a Linux distribution (such as Ubuntu, OpenSUSE,
 
 First, open Windows PowerShell as an administrator by right-clicking and selecting "Run as administrator". Next, insert the following command to install WSL:
 ```
-wsl --install -d Ubuntu-24.04
+wsl --install -d Ubuntu-26.04
 ```
 Once done (it might take a while), you must restart your PC to apply all the changes.
 
@@ -75,9 +109,9 @@ You should see something like:
 
 ```
 DISTRIB_ID=Ubuntu
-DISTRIB_RELEASE=24.04
-DISTRIB_CODENAME=noble
-DISTRIB_DESCRIPTION="Ubuntu 24.04.1 LTS"
+DISTRIB_RELEASE=26.04
+DISTRIB_CODENAME=resolute
+DISTRIB_DESCRIPTION="Ubuntu 26.04.1 LTS"
 ```
 
 ### Connecting USB Devices to WSL
@@ -180,30 +214,23 @@ You should be able to see your ST-Link Debug probe connected to your Ubuntu term
 
 Next, follow the installation instructions for Ubuntu **from the Ubuntu terminal**, not the Windows PowerShell.
 
-
 ## Ubuntu
 
-First, we must install [`git`](https://git-scm.com) in our system.
-If you have not done it yet, open a terminal and insert the following commands:
-```bash
-sudo apt update
-sudo apt upgrade
-sudo apt install git
+First, move to MatrixMCU's directory in a terminal:
 ```
-
-Don't forget to insert `Y` in the terminal every time Ubuntu asks you if you want to continue.
-
-Next, clone this repo and move to the cloned directory:
-```
-git clone https://github.com/sdg2DieUpm/install-MatrixMCU.git && cd install-MatrixMCU
+cd <PATH_TO_MATRIXMCU>
 ```
 Then, if your OS is Ubuntu 22, run the script `ubuntu22.sh` in a terminal:
 ```bash
-source ubuntu22.sh
+source install/ubuntu22.sh
 ```
 Alternatively, if your OS is Ubuntu 24, run the script `ubuntu24.sh` in a terminal:
 ```bash
-source ubuntu24.sh
+source install/ubuntu24.sh
+```
+Finally, if your OS is Ubuntu 26, run the script `ubuntu26.sh` in a terminal:
+```bash
+source install/ubuntu26.sh
 ```
 
 Don't forget to insert `Y` in the terminal every time Ubuntu asks you if you want to continue.
