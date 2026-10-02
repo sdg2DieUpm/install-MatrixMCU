@@ -34,3 +34,26 @@ npx --yes @vscode/vsce package
 ```
 
 The `vscode-extension-packs` workflow packages every draft on pull requests.
+
+## Test a VSIX in an isolated VS Code profile
+
+Create a temporary VSIX, then install it with separate user-data and extension
+directories. This keeps the test away from your normal VS Code profile:
+
+```bash
+cd vscode-extension-packs/native
+npx --yes @vscode/vsce package --out /tmp/matrixmcu-native.vsix
+mkdir -p /tmp/matrixmcu-test/native-data /tmp/matrixmcu-test/native-extensions
+code --user-data-dir /tmp/matrixmcu-test/native-data \
+	--extensions-dir /tmp/matrixmcu-test/native-extensions \
+	--install-extension /tmp/matrixmcu-native.vsix
+code --user-data-dir /tmp/matrixmcu-test/native-data \
+	--extensions-dir /tmp/matrixmcu-test/native-extensions \
+	--list-extensions
+```
+
+Repeat with the STM32 and Full packs using different temporary directories.
+Confirm the pack ID and member IDs appear in the output and in the Extensions
+view. This checks installation from VSIX, not Marketplace publishing or compiler
+installation. Windows/WSL and macOS packs still need hands-on tests on those
+platforms before publication.
