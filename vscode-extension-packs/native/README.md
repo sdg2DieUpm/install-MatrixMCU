@@ -1,4 +1,4 @@
-# MatrixMCU: C nativo
+# MatrixMCU: C/C++ nativo
 
 Extension Pack para seguir el recorrido de C nativo en Linux, macOS o WSL.
 Instala las extensiones de editor listadas en `package.json`; no instala GCC,

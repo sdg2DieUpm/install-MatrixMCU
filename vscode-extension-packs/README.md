@@ -6,7 +6,7 @@ installs the extensions listed in that pack.
 
 | Pack | Use |
 | --- | --- |
-| `matrixmcu-native` | C nativo en Linux, macOS o WSL |
+| `matrixmcu-c-native` | C/C++ nativo en Linux, macOS o WSL |
 | `matrixmcu-stm32` | Compilación cruzada con MatrixMCU/STM32 |
 | `matrixmcu-full` | Ambos recorridos |
 | `matrixmcu-windows-wsl` | Complemento para Windows y conexión USBIP/WSL |
@@ -47,11 +47,11 @@ directories. This keeps the test away from your normal VS Code profile:
 
 ```bash
 cd vscode-extension-packs/native
-npx --yes @vscode/vsce package --out /tmp/matrixmcu-native.vsix
+npx --yes @vscode/vsce package --out /tmp/matrixmcu-c-native.vsix
 mkdir -p /tmp/matrixmcu-test/native-data /tmp/matrixmcu-test/native-extensions
 code --user-data-dir /tmp/matrixmcu-test/native-data \
 	--extensions-dir /tmp/matrixmcu-test/native-extensions \
-	--install-extension /tmp/matrixmcu-native.vsix
+	--install-extension /tmp/matrixmcu-c-native.vsix
 code --user-data-dir /tmp/matrixmcu-test/native-data \
 	--extensions-dir /tmp/matrixmcu-test/native-extensions \
 	--list-extensions
