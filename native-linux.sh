@@ -28,6 +28,10 @@ check_ubuntu() {
     # shellcheck disable=SC1091
     . /etc/os-release
 
+    if [[ -n ${WSL_DISTRO_NAME:-} || -n ${WSL_INTEROP:-} || $(uname -r) == *microsoft* ]]; then
+        fail 'Windows/WSL todavia no esta admitido por este instalador.'
+    fi
+
     [[ ${ID:-} == ubuntu ]] || fail 'Este instalador admite Ubuntu; no se han realizado cambios.'
     case ${VERSION_ID:-} in
         22.04|24.04|26.04) ;;

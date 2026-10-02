@@ -4,14 +4,25 @@ on:
   pull_request:
     paths:
       - 'vscode-extension-packs/**'
+      - 'native-linux.sh'
       - '.github/workflows/vscode-extension-packs.yml'
   push:
     branches: [main]
     paths:
       - 'vscode-extension-packs/**'
+      - 'native-linux.sh'
       - '.github/workflows/vscode-extension-packs.yml'
 
 jobs:
+  validate-native-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate native Ubuntu installer
+        run: |
+          bash -n native-linux.sh
+          bash native-linux.sh --help
+
   package:
     runs-on: ubuntu-latest
     strategy:
