@@ -30,7 +30,7 @@ jobs:
           node-version: 22
       - name: Package Extension Pack
         working-directory: vscode-extension-packs/${{ matrix.pack }}
-        run: npx --yes @vscode/vsce package --out "$RUNNER_TEMP/matrixmcu-${{ matrix.pack }}.vsix"
+        run: npx --yes @vscode/vsce package --pre-release --out "$RUNNER_TEMP/matrixmcu-${{ matrix.pack }}.vsix"
       - name: Upload test VSIX
         uses: actions/upload-artifact@v4
         with:
