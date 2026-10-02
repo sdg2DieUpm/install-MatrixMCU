@@ -33,7 +33,9 @@ From each pack directory, run:
 npx --yes @vscode/vsce package
 ```
 
-The `vscode-extension-packs` workflow packages every draft on pull requests.
+The `vscode-extension-packs` workflow packages every draft on pull requests and
+uploads one VSIX artifact per pack for seven days. Download the desired artifact
+from the workflow run to test it without publishing it to the Marketplace.
 
 ## Test a VSIX in an isolated VS Code profile
 

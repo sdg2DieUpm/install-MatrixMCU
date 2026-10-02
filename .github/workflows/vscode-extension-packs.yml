@@ -31,3 +31,10 @@ jobs:
       - name: Package Extension Pack
         working-directory: vscode-extension-packs/${{ matrix.pack }}
         run: npx --yes @vscode/vsce package --out "$RUNNER_TEMP/matrixmcu-${{ matrix.pack }}.vsix"
+      - name: Upload test VSIX
+        uses: actions/upload-artifact@v4
+        with:
+          name: matrixmcu-${{ matrix.pack }}-vsix
+          path: ${{ runner.temp }}/matrixmcu-${{ matrix.pack }}.vsix
+          if-no-files-found: error
+          retention-days: 7
