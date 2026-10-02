@@ -2,7 +2,7 @@
   "name": "matrixmcu-stm32",
   "displayName": "MatrixMCU: STM32 cruzado",
   "description": "Extensiones de VS Code para compilación cruzada y depuración de STM32 con MatrixMCU.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "sdgdieupm",
   "license": "MIT",
   "engines": {

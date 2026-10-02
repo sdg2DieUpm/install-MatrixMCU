@@ -2,7 +2,7 @@
   "name": "matrixmcu-full",
   "displayName": "MatrixMCU: completo",
   "description": "Extensiones de VS Code para C nativo y compilación cruzada STM32 con MatrixMCU.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "sdgdieupm",
   "license": "MIT",
   "engines": {

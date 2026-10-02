@@ -2,7 +2,7 @@
   "name": "matrixmcu-native",
   "displayName": "MatrixMCU: C nativo",
   "description": "Extensiones de VS Code para programación en C nativo con MatrixMCU.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "sdgdieupm",
   "license": "MIT",
   "engines": {

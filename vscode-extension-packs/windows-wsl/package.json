@@ -2,7 +2,7 @@
   "name": "matrixmcu-windows-wsl",
   "displayName": "MatrixMCU: Windows y WSL",
   "description": "Extensiones locales de Windows para trabajar con MatrixMCU en WSL y conectar USBIP.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "sdgdieupm",
   "license": "MIT",
   "engines": {
