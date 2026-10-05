@@ -1,12 +1,12 @@
-# MatrixMCU: Windows y WSL
+# MatrixMCU: Windows/WSL
 
-Complemento para trabajar desde VS Code instalado en Windows con una
-distribución WSL y conectar la placa por USBIP.
+Add-on pack for using VS Code on Windows with a WSL distribution and
+connecting a development board through USBIP.
 
-Instala este pack manualmente desde la ventana **Local** de VS Code en Windows.
-Después abre el proyecto en la distribución WSL seleccionada y revisa en la
-vista Extensions si alguna extensión de trabajo también debe instalarse en el
-host remoto. El comportamiento de ubicación de USBIP Connect debe confirmarse
-con pruebas antes de publicar el pack.
+Install this pack manually from the **Local** VS Code window on Windows.
+Then open your project in the selected WSL distribution and check the
+**Extensions** view to see whether any development extensions also need to be
+installed on the remote host. USBIP Connect placement still needs hands-on
+testing before releasing an update.
 
-Este pack no instala WSL, usbipd-win, Linux tools ni herramientas de MatrixMCU.
+This pack does not install WSL, usbipd-win, Linux tools, or MatrixMCU tools.

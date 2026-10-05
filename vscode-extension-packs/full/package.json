@@ -1,8 +1,8 @@
 {
   "name": "matrixmcu-full",
-  "displayName": "MatrixMCU: completo",
-  "description": "Extensiones de VS Code para C nativo y compilación cruzada STM32 con MatrixMCU.",
-  "version": "0.1.1",
+  "displayName": "MatrixMCU: Full",
+  "description": "VS Code extensions for native C/C++ development and STM32 cross-compilation with MatrixMCU.",
+  "version": "0.1.2",
   "publisher": "sdgdieupm",
   "license": "MIT",
   "engines": {
@@ -25,10 +25,10 @@
     "twxs.cmake",
     "danielpinto8zz6.c-cpp-project-generator",
     "ms-vscode.hexeditor",
+    "vscode-icons-team.vscode-icons",
     "marus25.cortex-debug",
     "rioj7.command-variable",
-    "ms-vscode.vscode-serial-monitor",
-    "gruntfuggly.todo-tree"
+    "ms-vscode.vscode-serial-monitor"
   ],
   "repository": {
     "type": "git",

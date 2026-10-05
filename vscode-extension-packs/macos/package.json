@@ -1,8 +1,8 @@
 {
   "name": "matrixmcu-macos",
   "displayName": "MatrixMCU: macOS",
-  "description": "Extensión complementaria de depuración nativa para MatrixMCU en macOS.",
-  "version": "0.1.1",
+  "description": "Native LLDB debugging support for MatrixMCU on macOS.",
+  "version": "0.1.2",
   "publisher": "sdgdieupm",
   "license": "MIT",
   "engines": {

@@ -37,21 +37,6 @@ https://github.com/sdg2DieUpm/MatrixMCU.git
 
 Next, depending on the Operating System of your computer, follow the next steps.
 
-## First semester: native C on Ubuntu
-
-For native C development on Ubuntu 22.04, 24.04, or 26.04, run the dedicated
-installer from this repository:
-
-```bash
-bash native-linux.sh
-```
-
-It installs GCC/G++, Make, CMake, GDB, and Git. To check an existing setup
-without changing it, run `bash native-linux.sh --check`. Then install the
-[MatrixMCU: C/C++ native Extension Pack](https://marketplace.visualstudio.com/items?itemName=sdgdieupm.matrixmcu-c-native)
-manually from VS Code. The [student guide](https://sdg2dieupm.github.io/install-MatrixMCU-guide/linux-nativo-ubuntu.html)
-contains the full steps and validation exercise.
-
 ## MacOS
 
 First, we must install [Homebrew](https://brew.sh) on our Mac.
@@ -229,7 +214,29 @@ You should be able to see your ST-Link Debug probe connected to your Ubuntu term
 
 Next, follow the installation instructions for Ubuntu **from the Ubuntu terminal**, not the Windows PowerShell.
 
-## Ubuntu
+## Linux
+
+### Native C (first semester)
+
+On Debian and Debian-based distributions, including Ubuntu in WSL, run the
+dedicated installer from a clone of this installation repository:
+
+```bash
+git clone https://github.com/sdg2DieUpm/install-MatrixMCU.git
+cd install-MatrixMCU
+bash native-linux.sh
+```
+
+Git must be installed before cloning. A recursive clone is not needed for this
+native installer. If you already have a clone, run `bash native-linux.sh` there.
+
+It installs GCC/G++, Make, CMake, GDB, and Git. To check the available commands
+without changing the system, run `bash native-linux.sh --check`. Then install the
+[MatrixMCU: Native C/C++ Extension Pack](https://marketplace.visualstudio.com/items?itemName=sdgdieupm.matrixmcu-c-native)
+manually from VS Code. The [student guide](https://sdg2dieupm.github.io/install-MatrixMCU-guide/c-nativo.html)
+contains the installation steps.
+
+### STM32 cross-compilation on Ubuntu
 
 First, move to MatrixMCU's directory in a terminal:
 ```

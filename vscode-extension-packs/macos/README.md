@@ -1,7 +1,6 @@
 # MatrixMCU: macOS
 
-Complemento opcional para depuración de C nativo con LLDB en macOS. Instálalo
-manualmente desde la vista **Extensions** después del pack de perfil que hayas
-elegido.
+Optional add-on for native C/C++ debugging with LLDB on macOS. Install it
+manually from the **Extensions** view after installing your chosen profile pack.
 
-No instala Xcode Command Line Tools ni otros componentes del sistema.
+It does not install Xcode Command Line Tools or other system components.

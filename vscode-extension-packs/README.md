@@ -1,30 +1,38 @@
 # MatrixMCU VS Code Extension Packs
 
-Draft Marketplace Extension Packs for the MatrixMCU courses. Students explicitly
+Marketplace Extension Packs for the MatrixMCU courses. Students explicitly
 choose and install one pack from the VS Code Extensions view; VS Code then
 installs the extensions listed in that pack.
 
 | Pack | Use |
 | --- | --- |
-| `matrixmcu-c-native` | C/C++ nativo en Linux, macOS o WSL |
-| `matrixmcu-stm32` | Compilación cruzada con MatrixMCU/STM32 |
-| `matrixmcu-full` | Ambos recorridos |
-| `matrixmcu-windows-wsl` | Complemento para Windows y conexión USBIP/WSL |
-| `matrixmcu-macos` | Complemento para depuración nativa con LLDB |
+| `matrixmcu-c-native` | Native C/C++ development on Linux, macOS, or WSL |
+| `matrixmcu-stm32` | MatrixMCU/STM32 cross-compilation |
+| `matrixmcu-full` | Both native and cross-compilation workflows |
+| `matrixmcu-windows-wsl` | Windows add-on for WSL and USBIP connections |
+| `matrixmcu-macos` | macOS add-on for native LLDB debugging |
 
 The packs only install VS Code Marketplace extensions. They do not install GCC,
 ARM toolchains, CMake, OpenOCD, USBIPD, or operating-system packages. Those
-remain the responsibility of the interactive MatrixMCU installer.
+remain the responsibility of the MatrixMCU installation scripts.
+
+Native and Full include the official `vscode-icons-team.vscode-icons` file icon
+theme. To enable it, run **Preferences: File Icon Theme** and select **VSCode Icons**.
+
+Todo Tree is no longer included. Updating a pack does not automatically uninstall
+extensions removed from its list; uninstall Todo Tree manually if you no longer
+want to use it.
 
 For Windows, test the Windows/WSL pack from the local VS Code window and test the
 profile pack while connected to the target WSL distribution. Confirm the
 Extensions view shows each extension in the intended Local or WSL location
-before publishing these packs.
+before publishing an update.
 
-The manifests use the requested publisher ID `sdgdieupm`. Confirm that the
-organization can register this exact ID and create the publisher before release.
-The publisher ID cannot be changed after publishing. Do not publish these drafts
-until the professor review and the WSL placement tests pass.
+The manifests use the existing publisher ID `sdgdieupm`. Keep both the publisher
+and extension names unchanged so updates retain their Marketplace IDs. Version
+`0.1.2` updates the packs' names, descriptions, and documentation to English.
+Packaging does not publish an update; publishing remains a separate manual step
+after review and the required platform tests.
 
 ## Package locally
 
@@ -34,7 +42,7 @@ From each pack directory, run:
 npx --yes @vscode/vsce package
 ```
 
-The `vscode-extension-packs` workflow packages every draft as a pre-release on
+The `vscode-extension-packs` workflow packages every pack as a pre-release on
 pull requests and uploads one VSIX artifact per pack for seven days. Download
 the desired artifact from the workflow run to test it without publishing it to
 the Marketplace. Use these pre-release artifacts if uploading them manually;

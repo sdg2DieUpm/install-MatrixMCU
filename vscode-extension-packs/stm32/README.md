@@ -1,12 +1,12 @@
-# MatrixMCU: STM32 cruzado
+# MatrixMCU: STM32 Cross-Compilation
 
-Extension Pack para editar, compilar y depurar proyectos STM32 de MatrixMCU
-desde VS Code. Contiene soporte C/C++, CMake, Cortex-Debug, variables de tareas,
-monitor serie y TODOs.
+Extension Pack for editing, building, and debugging MatrixMCU STM32 projects
+in VS Code. It includes C/C++ support, CMake integration, Cortex-Debug,
+task variables, and a serial monitor.
 
-Instálalo manualmente desde la vista **Extensions**. En Windows, conecta VS Code
-a la distribución WSL elegida y comprueba que las extensiones de trabajo están
-instaladas en el destino correcto antes de depurar.
+Install the pack manually from the **Extensions** view. On Windows, connect
+VS Code to your selected WSL distribution and check that the development
+extensions are installed in the correct location before debugging.
 
-El pack no instala ARM GNU Toolchain, CMake, OpenOCD, usbipd-win ni herramientas
-del sistema. Usa el instalador MatrixMCU para esas dependencias.
+The pack does not install the ARM GNU Toolchain, CMake, OpenOCD, usbipd-win,
+or system tools. Use the MatrixMCU installation scripts for those dependencies.
