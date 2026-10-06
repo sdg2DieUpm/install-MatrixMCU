@@ -1,0 +1,28 @@
+{
+  "name": "matrixmcu-macos",
+  "displayName": "MatrixMCU: macOS",
+  "description": "Native LLDB debugging support for MatrixMCU on macOS.",
+  "version": "0.1.2",
+  "publisher": "sdgdieupm",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "keywords": [
+    "matrixmcu",
+    "macos",
+    "lldb",
+    "education"
+  ],
+  "extensionPack": [
+    "vadimcn.vscode-lldb"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sdg2DieUpm/install-MatrixMCU.git"
+  },
+  "homepage": "https://sdg2dieupm.github.io/install-MatrixMCU-guide/"
+}

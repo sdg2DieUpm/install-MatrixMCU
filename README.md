@@ -214,7 +214,30 @@ You should be able to see your ST-Link Debug probe connected to your Ubuntu term
 
 Next, follow the installation instructions for Ubuntu **from the Ubuntu terminal**, not the Windows PowerShell.
 
-## Ubuntu
+## Linux
+
+### Native C (first semester)
+
+On Debian and Debian-based distributions, including Ubuntu in WSL, run the
+dedicated installer from a clone of this installation repository:
+
+```bash
+git clone https://github.com/sdg2DieUpm/install-MatrixMCU.git
+cd install-MatrixMCU
+bash native-linux.sh
+```
+
+Git must be installed before cloning. A recursive clone is not needed for this
+native installer. If you already have a clone, run `bash native-linux.sh` there.
+
+It installs GCC/G++, Make, CMake, GDB, and Git. To check the available commands
+and compile and link a small C program using standard headers, run
+`bash native-linux.sh --check`. This does not install packages. Then install the
+[MatrixMCU: Native C/C++ Extension Pack](https://marketplace.visualstudio.com/items?itemName=sdgdieupm.matrixmcu-c-native)
+manually from VS Code. The [student guide](https://sdg2dieupm.github.io/install-MatrixMCU-guide/c-nativo.html)
+contains the installation steps.
+
+### STM32 cross-compilation on Ubuntu
 
 First, move to MatrixMCU's directory in a terminal:
 ```

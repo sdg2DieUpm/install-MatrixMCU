@@ -1,0 +1,30 @@
+{
+  "name": "matrixmcu-windows-wsl",
+  "displayName": "MatrixMCU: Windows/WSL",
+  "description": "Local Windows extensions for MatrixMCU development in WSL and USBIP device connections.",
+  "version": "0.1.2",
+  "publisher": "sdgdieupm",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "keywords": [
+    "matrixmcu",
+    "windows",
+    "wsl",
+    "usbip",
+    "education"
+  ],
+  "extensionPack": [
+    "ms-vscode-remote.remote-wsl",
+    "thecreativedodo.usbip-connect"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sdg2DieUpm/install-MatrixMCU.git"
+  },
+  "homepage": "https://sdg2dieupm.github.io/install-MatrixMCU-guide/"
+}
