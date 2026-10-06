@@ -22,6 +22,29 @@ jobs:
         run: |
           bash -n native-linux.sh
           bash native-linux.sh --help
+      - name: Test C compilation checks with other tools stubbed
+        run: |
+          g++() { :; }
+          make() { :; }
+          cmake() { :; }
+          gdb() { :; }
+          git() { :; }
+          export -f g++ make cmake gdb git
+          bash native-linux.sh --check
+
+          gcc() { /usr/bin/gcc -nostdinc "$@"; }
+          export -f gcc
+          if bash native-linux.sh --check; then
+            echo "Expected failure with missing C headers"
+            exit 1
+          fi
+
+          gcc() { /usr/bin/gcc -nodefaultlibs "$@"; }
+          export -f gcc
+          if bash native-linux.sh --check; then
+            echo "Expected failure with missing C libraries"
+            exit 1
+          fi
 
   package:
     runs-on: ubuntu-latest

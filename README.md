@@ -231,7 +231,8 @@ Git must be installed before cloning. A recursive clone is not needed for this
 native installer. If you already have a clone, run `bash native-linux.sh` there.
 
 It installs GCC/G++, Make, CMake, GDB, and Git. To check the available commands
-without changing the system, run `bash native-linux.sh --check`. Then install the
+and compile and link a small C program using standard headers, run
+`bash native-linux.sh --check`. This does not install packages. Then install the
 [MatrixMCU: Native C/C++ Extension Pack](https://marketplace.visualstudio.com/items?itemName=sdgdieupm.matrixmcu-c-native)
 manually from VS Code. The [student guide](https://sdg2dieupm.github.io/install-MatrixMCU-guide/c-nativo.html)
 contains the installation steps.
