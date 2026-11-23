@@ -23,15 +23,16 @@ wget https://developer.arm.com/-/media/Files/downloads/gnu/15.2.rel1/binrel/arm-
 sudo tar -xf /tmp/arm-toolchain.tar.xz -C /opt/MatrixMCU
 
 # Create symbolic links to arm toolchain in /opt/MatrixMCU/bin
-sudo ln -s /opt/MatrixMCU/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc /opt/MatrixMCU/bin/arm-none-eabi-gcc
-sudo ln -s /opt/MatrixMCU/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++ /opt/MatrixMCU/bin/arm-none-eabi-g++
-sudo ln -s /opt/MatrixMCU/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-nm /opt/MatrixMCU/bin/arm-none-eabi-nm
-sudo ln -s /opt/MatrixMCU/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-objcopy /opt/MatrixMCU/bin/arm-none-eabi-objcopy
-sudo ln -s /opt/MatrixMCU/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-objdump /opt/MatrixMCU/bin/arm-none-eabi-objdump
-sudo ln -s /opt/MatrixMCU/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gdb /opt/MatrixMCU/bin/arm-none-eabi-gdb
+sudo ln -sf /opt/MatrixMCU/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc /opt/MatrixMCU/bin/arm-none-eabi-gcc
+sudo ln -sf /opt/MatrixMCU/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++ /opt/MatrixMCU/bin/arm-none-eabi-g++
+sudo ln -sf /opt/MatrixMCU/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-nm /opt/MatrixMCU/bin/arm-none-eabi-nm
+sudo ln -sf /opt/MatrixMCU/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-objcopy /opt/MatrixMCU/bin/arm-none-eabi-objcopy
+sudo ln -sf /opt/MatrixMCU/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-objdump /opt/MatrixMCU/bin/arm-none-eabi-objdump
+sudo ln -sf /opt/MatrixMCU/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gdb /opt/MatrixMCU/bin/arm-none-eabi-gdb
 
 # Add /opt/MatrixMCU/bin to PATH
-echo 'export PATH=/opt/MatrixMCU/bin:$PATH # Required for MatrixMCU toolkit' >> ~/.bashrc
+grep -q '/opt/MatrixMCU/bin' ~/.bashrc || \
+  echo 'export PATH=/opt/MatrixMCU/bin:$PATH # Required for MatrixMCU toolkit' >> ~/.bashrc
 
 # Alternatively it can also be added inside a separate file in ~/.bashrc.d/ directory, which is a more modular approach.
 #
