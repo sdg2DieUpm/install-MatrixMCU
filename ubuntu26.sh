@@ -27,16 +27,17 @@ wget https://developer.arm.com/-/media/Files/downloads/gnu/$TOOLCHAIN_VERSION/bi
 sudo tar -xf /tmp/arm-toolchain.tar.xz -C /opt/MatrixMCU
 
 # Create symbolic links to arm toolchain in /opt/MatrixMCU/bin
-sudo ln -s /opt/MatrixMCU/$TOOLCHAIN_DIR/bin/arm-none-eabi-gcc /opt/MatrixMCU/bin/arm-none-eabi-gcc
-sudo ln -s /opt/MatrixMCU/$TOOLCHAIN_DIR/bin/arm-none-eabi-g++ /opt/MatrixMCU/bin/arm-none-eabi-g++
-sudo ln -s /opt/MatrixMCU/$TOOLCHAIN_DIR/bin/arm-none-eabi-nm /opt/MatrixMCU/bin/arm-none-eabi-nm
-sudo ln -s /opt/MatrixMCU/$TOOLCHAIN_DIR/bin/arm-none-eabi-objcopy /opt/MatrixMCU/bin/arm-none-eabi-objcopy
-sudo ln -s /opt/MatrixMCU/$TOOLCHAIN_DIR/bin/arm-none-eabi-objdump /opt/MatrixMCU/bin/arm-none-eabi-objdump
+sudo ln -sf /opt/MatrixMCU/$TOOLCHAIN_DIR/bin/arm-none-eabi-gcc /opt/MatrixMCU/bin/arm-none-eabi-gcc
+sudo ln -sf /opt/MatrixMCU/$TOOLCHAIN_DIR/bin/arm-none-eabi-g++ /opt/MatrixMCU/bin/arm-none-eabi-g++
+sudo ln -sf /opt/MatrixMCU/$TOOLCHAIN_DIR/bin/arm-none-eabi-nm /opt/MatrixMCU/bin/arm-none-eabi-nm
+sudo ln -sf /opt/MatrixMCU/$TOOLCHAIN_DIR/bin/arm-none-eabi-objcopy /opt/MatrixMCU/bin/arm-none-eabi-objcopy
+sudo ln -sf /opt/MatrixMCU/$TOOLCHAIN_DIR/bin/arm-none-eabi-objdump /opt/MatrixMCU/bin/arm-none-eabi-objdump
 
 # Get the path to gdb-multiarch...
 GDB_MULTIARCH_PATH=$(which gdb-multiarch)
 # ... and create a symbolic link to gdb-multiarch in /opt/MatrixMCU/bin with the name arm-none-eabi-gdb
-sudo ln -s $GDB_MULTIARCH_PATH /opt/MatrixMCU/bin/arm-none-eabi-gdb
+sudo ln -sf $GDB_MULTIARCH_PATH /opt/MatrixMCU/bin/arm-none-eabi-gdb
 
 # Add /opt/MatrixMCU/bin to PATH
-echo 'export PATH=/opt/MatrixMCU/bin:$PATH # Required for MatrixMCU toolkit' >> ~/.bashrc
+grep -q '/opt/MatrixMCU/bin' ~/.bashrc || \
+  echo 'export PATH=/opt/MatrixMCU/bin:$PATH # Required for MatrixMCU toolkit' >> ~/.bashrc
